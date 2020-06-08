@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
+
 <body>
-    <!-- template 우리가 만든 모델 데이터 연결->
+    <!-- template 우리가 만든 모델 데이터 연결-->
 {% for article in article.all %}
     <div class="container">
         <h1>{{ article.title }}</h1>
@@ -15,7 +17,13 @@
     </div>
 {% endfor %}
 
-
-    
+{% for blog in blog.all %}
+    <div class="container">
+        <h1>{{ blog.title }}</h1>
+        <p> {{ blog.body }}</p>
+        <p> {{ blog.date }}</p>
+    </div>
+{% endfor %}
 </body>
+
 </html>
